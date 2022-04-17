@@ -18,15 +18,17 @@ class MenuState extends FlxState
     title.screenCenter(X);
     add(title);
     
+    if (FlxG.sound.music == null)
+    {
+
+      FlxG.sound.playMusic(AssetPaths.song2__ogg, 1, true);
+
+    }
+    
     play = new FlxButton(0, 0, "Play", clickPlay);
     play.x = (FlxG.width / 2) - (play.width / 2);
     play.y = (FlxG.height / 2);
     add(play);
-    
-    if (FlxG.sound.music == null)
-    {
-      FlxG.sound.playMusic(AssetPaths.song2__ogg, 1, true);
-    }
     
     super.create();
   }
