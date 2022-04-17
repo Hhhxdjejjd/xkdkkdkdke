@@ -23,6 +23,11 @@ class MenuState extends FlxState
     play.y = (FlxG.height / 2);
     add(play);
     
+    if (FlxG.sound.music == null)
+    {
+      FlxG.sound.playmusic(AssetPaths.song2_ogg, 1, true);
+    }
+    
     super.create();
   }
   
