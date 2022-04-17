@@ -25,7 +25,7 @@ class MenuState extends FlxState
     
     if (FlxG.sound.music == null)
     {
-      FlxG.sound.playmusic(AssetPaths.song2_ogg, 1, true);
+      FlxG.sound.playmusic(AssetPaths.song2.ogg, 1, true);
     }
     
     super.create();
