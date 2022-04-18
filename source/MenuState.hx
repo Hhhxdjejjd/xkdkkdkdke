@@ -28,7 +28,6 @@ class MenuState extends FlxState
     play = new FlxButton(0, 0, "Play", clickPlay);
     play.x = (FlxG.width / 2) - (play.width / 2);
     play.y = (FlxG.height / 2);
-    play.onUp.sound = FlxG.sound.play(AssetPaths.button_press__wav);
     add(play);
     
     super.create();
@@ -38,6 +37,7 @@ class MenuState extends FlxState
   {
     FlxG.camera.fade(FlxColor.BLACK, 0.33, false, () ->
     {
+      FlxG.sound.play(AssetPaths.button_press__wav);
       FlxG.sound.destroy(true);
       FlxG.switchState(new PlayState());
     });
